@@ -1,0 +1,41 @@
+$primary:#515c7a;
+$dark:#2c2c2c;
+$light:#3ba3d8;
+$white:#fff;
+$black: #000;
+$lora: 'Lora',
+serif;
+$open-sans:'Open Sans',
+sans-serif;
+$poppins: 'Poppins',
+sans-serif;
+@keyframes up-down {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 8%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.up-down {
+    position: relative;
+    &:before {
+        position: absolute;
+        height: 22pc;
+        width: 22pc;
+        bottom: 0;
+        left: -11%;
+        content: '';
+        border-radius: 50%;
+        border: 53px solid $primary;
+        z-index: -1;
+        animation-name: up-down;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
